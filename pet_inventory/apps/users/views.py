@@ -11,6 +11,7 @@ class index(views.View):
 
     def get(self, request):
         """Get method for class View, Return the index template"""
+
         return render(request, 'users/index.html')
 
 
@@ -19,10 +20,12 @@ class iniciarSesion(views.View):
 
     def get(self, request):
         """Get method for class IniciarSesion, Return the inciarSesion template"""
+
         return render(request, 'users/iniciarSesion.html')
 
     def post(self, request):
         """Post method for class IniciarSesion, Athentication for user"""
+
         print(request.POST)
         username = request.POST['txtUsername']
         password = request.POST['txtPassword']
@@ -39,6 +42,7 @@ class registrarUsuario(views.View):
 
     def post(self, request):
         """Post method for class RegistrarUsuario, Register a user"""
+
         username = request.POST['username']
         email = request.POST['email']
         password = make_password(request.POST['password'])

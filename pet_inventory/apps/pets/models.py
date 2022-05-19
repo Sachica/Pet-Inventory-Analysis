@@ -5,6 +5,7 @@ from django.db import models
 
 class Pet(models.Model):
     """Pet model class"""
+
     name = models.CharField(max_length=255)
     species = models.CharField(max_length=255)
     age = models.IntegerField()
@@ -13,4 +14,5 @@ class Pet(models.Model):
 
     def __str__(self):
         """To String method for Pet class"""
+
         return self.name
